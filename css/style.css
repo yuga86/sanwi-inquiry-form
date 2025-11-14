@@ -1,0 +1,370 @@
+/* General Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.main-header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header-content .logo img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 30px;
+}
+
+.main-nav ul li a {
+    color: #555;
+    font-weight: bold;
+    padding: 5px 0;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: #005666; 
+    border-bottom: 2px solid #005666;
+}
+
+.contact-phone {
+    font-weight: bold;
+    color: #005666; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* --- Hero Banner --- */
+.hero-banner {
+    background-color: #3f7b2c;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero-banner h2 {
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    flex-wrap: wrap; 
+}
+
+/* Contact Form Section (Dynamic Dropdowns) */
+.contact-form-section {
+    flex: 2; 
+    min-width: 300px; 
+}
+
+.form-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.form-title-small {
+    color: #888;
+    font-size: 0.85em;
+    margin-bottom: 5px;
+}
+
+.contact-form-section h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+/* UPDATED: Added input[type="number"] to this list 
+   to ensure the Quantity field has the correct look and feel.
+*/
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"], /* <-- ADDED HERE */
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s, background-color 0.3s;
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Special styling to remove default number input spinner (optional, but cleaner) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+/* END Special styling */
+
+select {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23555'%3e%3cpath d='M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+input:focus,
+select:focus {
+    border-color: #005666;
+    background-color: #fff;
+    outline: none;
+}
+
+select:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* Submit button styling */
+.submit-button {
+    background-color: #b0b0b0; 
+    color: #555;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 10px;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #999;
+    color: #fff;
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Contact Info Section (Carried over from image style) */
+.contact-info-section {
+    flex: 1; 
+    min-width: 280px; 
+}
+.contact-info-section h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+.info-item {
+    display: flex;
+    align-items: flex-start; 
+    margin-bottom: 20px;
+}
+.icon-circle {
+    background-color: #3f7b2c; 
+    color: #fff;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    flex-shrink: 0; 
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.info-details p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #555;
+}
+.info-label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+/* --- Footer (Carried over from image style) --- */
+.main-footer {
+    background-color: #f7a53c; 
+    color: #fff;
+    padding: 40px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; 
+}
+.footer-logo img {
+    height: 40px; 
+    filter: brightness(0) invert(1);
+}
+.footer-group {
+    flex: 1;
+    min-width: 200px; 
+}
+.footer-group h4 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.footer-group ul {
+    padding: 0;
+}
+.footer-group ul li {
+    margin-bottom: 8px;
+}
+.footer-group ul li a {
+    color: #fff;
+    transition: color 0.3s;
+}
+.footer-group ul li a:hover {
+    color: #eee;
+}
+.footer-info-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+.footer-info-item .footer-icon {
+    font-size: 1.1em;
+    color: #fff;
+    flex-shrink: 0;
+    margin-top: 3px; 
+}
+.footer-info-item p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column; 
+        gap: 30px;
+    }
+    .contact-form-section,
+    .contact-info-section {
+        flex: none; 
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-header .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .main-nav ul li {
+        margin-left: 0;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-row .form-group {
+        margin-bottom: 15px; 
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .footer-info-item {
+        justify-content: center; 
+    }
+}

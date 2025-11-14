@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanwi Chemicals - New Inquiry Structure</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-content container">
+            <div class="logo">
+                <a href="#"><img src="images/sanwi-logo.webp" alt="SANWI Chemicals Logo"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">PRODUCTS</a></li>
+                    <li><a href="#" class="active">CONTACT US</a></li>
+                </ul>
+            </nav>
+            <div class="contact-phone">
+                <i class="fas fa-phone-alt"></i><span>+91-9848030400</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <div class="container">
+            <h2>Pesticides Details Entry</h2>
+        </div>
+    </section>
+
+    <main class="main-content container">
+        <div class="contact-form-section">
+            <div class="form-card">
+                <p class="form-title-small">SPECIFY YOUR PRODUCT NEEDS</p>
+                <h3>Material and Volume Selection</h3>
+                
+                <form id="dynamicForm">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="type" class="sr-only">1. Select Type</label>
+                            <select id="type"></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="design" class="sr-only">2. Select Design</label>
+                            <select id="design" disabled></select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="volume" class="sr-only">3. Select Volume</label>
+                            <select id="volume" disabled></select>
+                        </div>
+                        <div class="form-group">
+                            <label for="consumption" class="sr-only">4. Select Consumption</label>
+                            <select id="consumption"></select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            
+                            <input type="number" id="quantity" placeholder="5. Enter Quantity (Numeric)*" required min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="location" class="sr-only">6. Location</label>
+                            <input type="text" id="location" placeholder="6. Enter Location (Max 1000 Chars)*" required maxlength="1000">
+                        </div>
+                    </div>
+<!--
+                    <div class="form-group" style="margin-top: 25px;">
+                        <label for="inquirer-name" class="sr-only">Your Name</label>
+                        <input type="text" id="inquirer-name" placeholder="Your Name*" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="inquirer-email" class="sr-only">Email Address</label>
+                            <input type="email" id="inquirer-email" placeholder="Email Address*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inquirer-phone" class="sr-only">Phone</label>
+                            <input type="tel" id="inquirer-phone" placeholder="Phone*" required>
+                        </div>
+                    </div> 
+-->
+
+                    <button type="submit" class="submit-button" disabled>Proceed with Inquiry</button>
+                </form>
+
+            </div>
+        </div>
+
+        <div class="contact-info-section">
+            <h3>Contact Information</h3>
+            <div class="info-item">
+                <div class="icon-circle"><i class="fas fa-building"></i></div>
+                <div class="info-details">
+                    <p class="info-label">Corporate Office:</p>
+                    <p>Plot No 5/A, Block No.4, Auto Nagar, Vanasthalipuram, Hyderabad, Telangana-500070</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+                <div class="info-details">
+                    <p class="info-label">Phone:</p>
+                    <p>+91-9848030400</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+                <div class="info-details">
+                    <p class="info-label">Email:</p>
+                    <p>sales@sanwichemicals.com</p>
+                </div>
+            </div>
+            <div class="info-item">
+                <div class="icon-circle"><i class="fas fa-industry"></i></div>
+                <div class="info-details">
+                    <p class="info-label">FACTORY:</p>
+                    <p>Sanwi Chemicals Pvt Ltd <br> Door No. 4-10-460 Plot No.1, Block No.1, Autonagar, Hayat Nagar, Rangareddy, Hyderabad, TS-500070</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <div class="footer-logo">
+                <img src="images/sanwi-logo.webp" alt="SANWI Chemicals Logo">
+            </div>
+            <div class="footer-group">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-group">
+                <h4>Contact Info</h4>
+                <div class="footer-info-item">
+                    <i class="fas fa-building footer-icon"></i>
+                    <p>Corporate Office:<br> Plot No 5/A, Block No.4, Auto Nagar, Vanasthalipuram, Hyderabad, Telangana-500070</p>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fas fa-phone-alt footer-icon"></i>
+                    <p>+91-9848030400</p>
+                </div>
+                <div class="footer-info-item">
+                    <i class="fas fa-envelope footer-icon"></i>
+                    <p>sales@sanwichemicals.com</p>
+                </div>
+            </div>
+            <div class="footer-group">
+                <h4>Ware House</h4>
+                <div class="footer-info-item">
+                    <i class="fas fa-industry footer-icon"></i>
+                    <p>Sanwi Chemicals Pvt Ltd<br>Door No. 4-10-460 Plot No.1, Block No.1, Autonagar, Hayat Nagar, Rangareddy, Hyderabad, TS-500070</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
